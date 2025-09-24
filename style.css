@@ -285,4 +285,61 @@ footer {
   transform: scale(1.06) translateY(-6px);
   box-shadow: 0 8px 24px rgba(56, 142, 60, 0.18);
   border-color: #a8e6cf;
+
+}
+
+@media (max-width: 900px) {
+  .tkdn-big-card-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .tkdn-large-card {
+    margin-top: 0;
+    width: 200px;
+    height: 260px;
+  }
+  .tkdn-small-cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .tkdn-small-cards img {
+    width: 100px;
+    height: 130px;
+  }
+  .legalitas-big-card {
+    padding: 16px 4px;
+  }
+  .legalitas-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .legalitas-gallery img {
+    width: 100px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tkdn-title, .legalitas-title {
+    font-size: 1.3em;
+  }
+  .tkdn-big-card-layout {
+    gap: 12px;
+  }
+  .tkdn-large-card {
+    width: 120px;
+    height: 160px;
+    padding: 4px;
+  }
+  .tkdn-small-cards img,
+  .legalitas-gallery img {
+    width: 60px;
+    height: 80px;
+  }
+  .legalitas-big-card {
+    padding: 8px 2px;
+  }
 }
