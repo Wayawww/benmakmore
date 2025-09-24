@@ -79,7 +79,7 @@ products.forEach(product => {
   const card = document.createElement('div');
   card.className = 'product-card';
   card.innerHTML = `
-  <img src="/${product.image}" alt="${product.name}">
+  <img src="${product.image}" alt="${product.name}">
   <h3 style="text-align:center;">${product.name}</h3>
   <div class="price">${product.price}</div>
   <div class="price">${product.price1}</div>
@@ -91,4 +91,5 @@ products.forEach(product => {
   </ul>
 `;
   productList.appendChild(card);
+
 });
