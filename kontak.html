@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - benmak-more</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Animasi fade */
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .fade-in {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    main {
+      min-height: 60vh;
+    }
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 32px;
+      text-align: center;
+    }
+    .contact-card h2 {
+      margin-bottom: 16px;
+    }
+    .contact-card p {
+      margin-bottom: 8px;
+      color: #555;
+    }
+    .contact-card a {
+      color: #2d7a46;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <header>
+    <nav>
+      <div class="navbar-brand">
+        <img class="logo" src="img/Picture555.png" alt="logo">
+        <span class="logo-text">Benmak More</span>
+      </div> 
+      <ul>
+        <li><a href="webandi.html" class="nav-link">Home</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="contact-card">
+      <h2>Kontak Kami</h2>
+      <p>Email: <a href="mailto:customer.ciptagirisentosa@gmail.com">customer.ciptagirisentosa@gmail</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281233499820" target="_blank">+62 812-3349-9820</a></p>
+      <p>Alamat: Jl. Riau E-25 Perum Sidorukun Indah, Desa/Kelurahan Sidorukun, Kec. Gresik, Kab. Gresik, Provinsi Jawa Timur, Kode Pos: 61112
+</p>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2019 Benmak More</p>
+  </footer>
+  <script>
+    // Animasi transisi antar halaman
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+        setTimeout(() => {
+          window.location = this.href;
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>
